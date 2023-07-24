@@ -1,0 +1,17 @@
+,,Order,T1a,TX ,T1b,TX,,T1,T2,T3,T4,,Sum,Sum + TX
+,,, (ID and zoom into T-Cells),ID High Variance Markers in T-Cells, (ID and zoom into CD8+T), ID High Variance Markers in CD8-T,," Combined, without high variance ID"," (go back to T cells, ID and zoom into CD4+, ID and zoom Sca1-)", (point out T-Cell cluster in Overview)," (ID and zoom into pDCs, ID and zoom into zoom 120g8+, ID and zoom into CD4+)", ,,
+P1,CyteGuide,1,25,25,20,35,,45,110,0,180,,335,395
+,Without,2,30,50,45,35,,75,135,0,230,,440,525
+P2,CyteGuide,2,15,25,45,10,,60,125,0,150,,335,370
+,Without,1,15,80,60,60,,75,120,0,270,,465,605
+P3,CyteGuide,1,15,15,15,15,,30,135,0,180,,345,375
+,Without,2,35,115,50,130,,85,150,0,270,,505,750
+P4,CyteGuide,2,25,30,15,30,,40,130,0,240,,410,470
+,Without,1,25,180,25,180,,50,120,0,230,,400,760
+P5,CyteGuide,1,20,20,25,30,,45,150,5,250,,450,500
+,Without,2,15,70,30,45,,45,190,10,280,,525,640
+,,,,,,,,,,,,,,
+Average,CyteGuide,,20,23,24,24,,44,130,1,200,,375,422
+,Without,,24,99,42,90,,66,143,2,256,,467,656
+Std Dev,CyteGuide,,5,5.7,12.45,10.84,,10.84,14.58,2.24,43.01,,52.32,59.22
+,Without,,8.94,51.04,14.4,62.55,,17.46,29.07,4.47,24.08,,50.07,99.59

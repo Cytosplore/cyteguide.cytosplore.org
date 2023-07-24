@@ -1,0 +1,43 @@
+body {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  font-weight: 200;
+}
+
+.navbar {
+  margin-bottom: 20px;
+}
+
+.jumbotron {
+  padding-top: 20px;
+}
+
+.jumbotron, .thumbnail {
+  background: white;
+  border: 1px solid #ddd;
+}
+
+.center {
+  text-align: center;
+}
+
+.jumbotitle {
+  background-image: url("../img/background.png");
+  background-position: center;
+  font-size: 33px;
+  font-weight: 500;
+  padding: 20px;
+}
+
+.caption {
+  margin-bottom: 15px;
+  font-size: 18px;
+}
+
+strong {
+  font-weight: 400;
+}
+
+a {
+  color: #333;
+}

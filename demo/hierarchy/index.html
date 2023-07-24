@@ -1,0 +1,118 @@
+﻿<!DOCTYPE html>
+<meta charset="utf-8">
+
+<head>
+	<title>Hierarchy</title>
+
+	<!-- number formatting -->
+	<script src="../jslibs/wNumb.min.js"></script>
+
+	<!-- double slider -->
+	<link rel="stylesheet" type="text/css" href="../jslibs/nouislider.css">
+	<script src="../jslibs/nouislider.min.js"></script>
+
+	<!-- google material design lite -->
+	<link rel="stylesheet" type="text/css" href="../jslibs/material.min.css">
+	<script src="../jslibs/material.min.js"></script>
+
+	<!-- d3 + colorbrewer -->
+	<script src="https://d3js.org/d3.v4.min.js"></script>
+	<script src="https://d3js.org/d3-hsv.v0.0.min.js"></script>
+	<script src="https://d3js.org/d3-scale-chromatic.v1.min.js"></script>
+
+	<!-- d3 context menu -->
+	<script src="../jslibs/d3-context-menu.js"></script>
+
+	<!-- gloabal css -->
+	<link rel="stylesheet" type="text/css" href="../jstools/ui.css">
+
+	<!-- custom css -->
+	<link rel="stylesheet" type="text/css" href="hierarchy.css">
+
+</head>
+
+<body>
+	<div oncontextmenu="return false;">
+
+		<div id="mainView"></div>
+
+        <div id="legendWrapper">
+            <div id="legend">
+                <span id="legendLabelTop" class="legendLabel">&nbsp; 5.0</span>
+                <span id="legendLabelBottom" class="legendLabel">&nbsp; 0.0</span>
+                <svg id="legendActive"></svg>
+            </div>
+            <div id="legendSelector">
+                <div><svg id="legendAll"></svg></div>
+                <div id="discreteSwitch" class="uiItem">
+                    <label class="mdl-switch mdl-js-switch" for="discreteColormapCheckBox">
+                        <input type="checkbox" class="mdl-switch__input" id="discreteColormapCheckBox" onclick="toggleDiscreteColormap()" />
+                        <span class="mdl-switch__label mdl_light_back">Discrete Colormap</span>
+                    </label>
+                </div>
+            </div>
+        </div>
+
+		<div id="uihover">
+			<div id="ui">
+				<div id="drawer">
+					<div id="drawerHandle">
+						<div class="drawerHandleSide" id="leftDrawerHandle">&nbsp;</div>
+						<div class="drawerHandleSide" id="rightDrawerHandle">&nbsp;</div>
+					</div>
+				</div>
+				<div class="uiContent" id="uiContentLayout">
+                    <select name="exploration" id="explorationSelector" class="varSelector uiItem" onchange="setActiveExploration(this.value)">
+                        <option value="" disabled>Select</option>
+	                    <option value="_p1" selected>Participant 1</option>
+	                    <option value="_p2">Participant 2</option>
+	                    <option value="_p3">Participant 3</option>
+	                    <option value="_p4">Participant 4</option>
+	                    <option value="_p5">Participant 5</option>
+                    </select>
+                    <div id="uncertaintySwitch" class="uiItem">
+                        <label class="mdl-switch mdl-js-switch" for="showVariationCheckBox">
+                            <input type="checkbox" class="mdl-switch__input" id="showVariationCheckBox" onclick="toggleVariation()" checked/>
+                            <span class="mdl-switch__label">Variation</span>
+                        </label>
+                    </div>
+                    <div id="sizeModeSwitch" class="uiItem">
+                        <label class="mdl-switch mdl-js-switch" for="sizeModeCheckBox">
+                            <input type="checkbox" class="mdl-switch__input" id="sizeModeCheckBox" onclick="toggleSizeMode()" checked/>
+                            <span class="mdl-switch__label">Uniform Size</span>
+                        </label>
+                    </div>
+				</div>
+                <div class="uiContent" id="uiContent2ndLayout">
+                    <div id="markerRange" class="slider uiItem"></div>
+                </div>
+			</div>
+		</div>
+	</div>
+
+	<div id="tooltip">
+		<div class="title"></div>
+		<div class="table">
+			<div class="tr">
+				<div class="tc">Expression:</div>
+				<div class="tc exp"></div>
+			</div>
+			<div class="tr">
+				<div class="tc">Std-Dev:</div>
+				<div class="tc stddev"></div>
+			</div>
+		</div>
+	</div>
+
+	<script src="../data/p1.js"></script>
+	<script src="../data/p2.js"></script>
+	<script src="../data/p3.js"></script>
+	<script src="../data/p4.js"></script>
+	<script src="../data/p5.js"></script>
+	<script src="../jstools/colormaps.js"></script>
+	<script src="../jstools/globals.js"></script>
+	<script src="../jstools/tools.js"></script>
+    <script src="../jstools/ui.js"></script>
+    <script src="hierarchy.ui.js"></script>
+	<script src="hierarchy.js"></script>
+</body>
